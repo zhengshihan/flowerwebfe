@@ -9,7 +9,7 @@ function PersonalCenter() {
   const getData = () => {
     axios
       .post(
-        "http://localhost:5015/api/Order/GetOrder",
+        "https://flowerapi.azurewebsites.net/api/Order/GetOrder",
         { id: 0, type: 1 },
         {
           headers: {

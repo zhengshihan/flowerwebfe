@@ -64,7 +64,7 @@ export default function () {
   };
   const handleRegister = () => {
     axios
-      .post("http://localhost:5015/api/Login/Register", {
+      .post("https://flowerapi.azurewebsites.net/api/Login/Register", {
         userName: userName,
         nickName: nickName,
         password: password,
@@ -86,7 +86,7 @@ export default function () {
 
   const handleLogin = () => {
     axios
-      .post("http://localhost:5015/api/Login/Check", {
+      .post("https://flowerapi.azurewebsites.net/api/Login/Check", {
         userName: userName,
         password: password,
         ValidateKey: key,
@@ -121,9 +121,12 @@ export default function () {
     var t = guid();
     setKey(t);
     axios
-      .get(`http://localhost:5015/api/Login/GetValidateCodeImages?t=${t}`, {
-        responseType: "arraybuffer", // Set the response type to arraybuffer
-      })
+      .get(
+        `https://flowerapi.azurewebsites.net/api/Login/GetValidateCodeImages?t=${t}`,
+        {
+          responseType: "arraybuffer", // Set the response type to arraybuffer
+        }
+      )
       .then((response) => {
         console.log(response);
         const blob = new Blob([response.data], {
@@ -188,7 +191,7 @@ export default function () {
                   <MDBNavbarLink
                     active
                     aria-current="page"
-                    href="http://localhost:3000/personalcenter/"
+                    href="flowerwebfe.vercel.app/personalcenter/"
                     onClick={getCaptcha}
                   >
                     User Center

@@ -19,7 +19,10 @@ function FlowerDetails() {
   const { id } = useParams();
   const getData = () => {
     axios
-      .post("http://localhost:5015/api/Flower/GetFlowers", { id: id, type: 0 })
+      .post("https://flowerapi.azurewebsites.net/api/Flower/GetFlowers", {
+        id: id,
+        type: 0,
+      })
       .then(function (response) {
         console.log(response);
         setFlower(response.data.result[0]);
@@ -84,7 +87,7 @@ function FlowerDetails() {
                         size="sm"
                         className="mt-2"
                       >
-                        <a href={`http://localhost:3000/pay/${id}`}>Buy it</a>
+                        <a href={`flowerwebfe.vercel.app/pay/${id}`}>Buy it</a>
                       </MDBBtn>
 
                       <MDBBtn

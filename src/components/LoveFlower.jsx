@@ -18,7 +18,10 @@ function LoveFlower() {
   const [flowers, setFlowers] = useState([]);
   const getData = () => {
     axios
-      .post("http://localhost:5015/api/Flower/GetFlowers", { id: 0, type: 1 })
+      .post("https://flowerapi.azurewebsites.net/api/Flower/GetFlowers", {
+        id: 0,
+        type: 1,
+      })
       .then(function (response) {
         console.log(response);
         setFlowers(response.data.result);
@@ -171,7 +174,7 @@ function LoveFlower() {
                   <MDBCol md="3" className="mb-4">
                     <MDBCard>
                       <NavLink
-                        to={`http://localhost:3000/loveflower/${item.id}`}
+                        to={`flowerwebfe.vercel.app/loveflower/${item.id}`}
                       >
                         <MDBRipple
                           rippleColor="light"

@@ -17,7 +17,10 @@ function BirthdayFlower() {
   const [flowers, setFlowers] = useState([]);
   const getData = () => {
     axios
-      .post("http://localhost:5015/api/Flower/GetFlowers", { id: 0, type: 2 })
+      .post("https://flowerapi.azurewebsites.net/api/Flower/GetFlowers", {
+        id: 0,
+        type: 2,
+      })
       .then(function (response) {
         console.log(response);
         setFlowers(response.data.result);
@@ -170,7 +173,7 @@ function BirthdayFlower() {
             {/* display flower */}
             <MDBRow>
               {flowers.map((item) => {
-                const dynamicURL = `http://localhost:3000/birthdayflower/${item.id}`;
+                const dynamicURL = `flowerwebfe.vercel.app/birthdayflower/${item.id}`;
 
                 return (
                   <MDBCol md="3" className="mb-4">

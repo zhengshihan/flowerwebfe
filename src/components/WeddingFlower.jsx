@@ -17,7 +17,10 @@ function WeddingFlower() {
   const [flowers, setFlowers] = useState([]);
   const getData = () => {
     axios
-      .post("http://localhost:5015/api/Flower/GetFlowers", { id: 0, type: 4 })
+      .post("https://flowerapi.azurewebsites.net/api/Flower/GetFlowers", {
+        id: 0,
+        type: 4,
+      })
       .then(function (response) {
         console.log(response);
         setFlowers(response.data.result);
@@ -180,7 +183,7 @@ function WeddingFlower() {
                           className="w-100"
                         />
                         <a
-                          href={`http://localhost:3000/weddingflower/${item.id}`}
+                          href={`flowerwebfe.vercel.app/weddingflower/${item.id}`}
                         >
                           <div className="mask">
                             <div className="d-flex justify-content-start align-items-end h-100">

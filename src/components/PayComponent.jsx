@@ -9,7 +9,7 @@ function PayComponent() {
   const handlePay = () => {
     axios
       .post(
-        "http://localhost:5015/api/Order/CreateOrder",
+        "https://flowerapi.azurewebsites.net/api/Order/CreateOrder",
         { flowerId: id },
         {
           headers: {
