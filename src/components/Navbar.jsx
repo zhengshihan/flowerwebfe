@@ -191,7 +191,7 @@ export default function () {
                   <MDBNavbarLink
                     active
                     aria-current="page"
-                    href="flowerwebfe.vercel.app/personalcenter/"
+                    href="/personalcenter/"
                     onClick={getCaptcha}
                   >
                     User Center

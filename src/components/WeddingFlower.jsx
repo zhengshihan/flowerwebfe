@@ -182,9 +182,7 @@ function WeddingFlower() {
                           fluid
                           className="w-100"
                         />
-                        <a
-                          href={`flowerwebfe.vercel.app/weddingflower/${item.id}`}
-                        >
+                        <a href={`/weddingflower/${item.id}`}>
                           <div className="mask">
                             <div className="d-flex justify-content-start align-items-end h-100">
                               <h5>

@@ -173,9 +173,7 @@ function LoveFlower() {
                 return (
                   <MDBCol md="3" className="mb-4">
                     <MDBCard>
-                      <NavLink
-                        to={`flowerwebfe.vercel.app/loveflower/${item.id}`}
-                      >
+                      <NavLink to={`/loveflower/${item.id}`}>
                         <MDBRipple
                           rippleColor="light"
                           rippleTag="div"

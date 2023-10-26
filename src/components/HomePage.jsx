@@ -80,17 +80,13 @@ export default function HomePage() {
                   return (
                     <MDBCol md="3" className="mb-4">
                       <MDBCard>
-                        <a
-                          href={`flowerwebfe.vercel.app/loveflower/${item.id}`}
-                        >
+                        <a href={`/loveflower/${item.id}`}>
                           <MDBRipple
                             rippleColor="light"
                             rippleTag="div"
                             className="bg-image rounded hover-zoom"
                           >
-                            <NavLink
-                              to={`flowerwebfe.vercel.app/loveflower/${item.id}`}
-                            >
+                            <NavLink to={`/loveflower/${item.id}`}>
                               {" "}
                               <MDBCardImage
                                 src={item.image}

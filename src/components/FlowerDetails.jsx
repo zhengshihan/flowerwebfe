@@ -87,7 +87,7 @@ function FlowerDetails() {
                         size="sm"
                         className="mt-2"
                       >
-                        <a href={`flowerwebfe.vercel.app/pay/${id}`}>Buy it</a>
+                        <a href={`/pay/${id}`}>Buy it</a>
                       </MDBBtn>
 
                       <MDBBtn

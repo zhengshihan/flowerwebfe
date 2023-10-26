@@ -169,7 +169,7 @@ function FriendFlower() {
             </div>
             <MDBRow>
               {flowers.map((item) => {
-                const dynamicURL = `flowerwebfe.vercel.app/birthdayflower/${item.id}`;
+                const dynamicURL = `/birthdayflower/${item.id}`;
                 return (
                   <MDBCol md="3" className="mb-4">
                     <MDBCard>
